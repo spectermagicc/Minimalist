@@ -18,8 +18,10 @@ body{
     color: rgb(29, 29, 29);
     font-weight: 500;
 }
+/*Generales*/
 
 
+/*Nav*/
 nav{
 	animation-delay: .5s;
     position: fixed;
@@ -27,10 +29,7 @@ nav{
     width: 30%;
     background-color: #f2f2f2;
     box-shadow: 6px 0px 29px -2px rgb(209, 209, 209);
-
 }
-
-
 
 ul{
     margin-top: 50%;
@@ -84,8 +83,6 @@ ul li a:hover{
     overflow: hidden;
 }
 
-
-
 .rrss{
     display: flex;
     align-items: center;
@@ -103,6 +100,7 @@ ul li a:hover{
     color: black;
     transition-duration: .5s;
 }
+/*Nav*/
 
 /*Main */
 .main{
@@ -252,17 +250,47 @@ ul li a:hover{
 }
 /*Contacto*/
 
-/*Keyframes*/
-@keyframes text_reveal {
-	100% {
-		color: #333;
-	}
+
+/*Medias*/
+@media screen and (max-width: 880px){
+    .main{
+        margin-left: 30%;
+        padding: 0;
+        width: 70%;
+    }
+
+
+    .laBanda .galeriaIntegrantes .integrante{
+        width: 100%;
+        max-width: none;
+    }
+
+
+    .laBanda .galeriaIntegrantes .integrante img:hover{
+        opacity: 1;
+        color: white;
+    
+    
+    
+
 }
 
-@media screen and (max-width: 450px){
+
+@media screen and (max-width: 460px){
+    .rrss{
+        display: flex;
+        align-items: center;
+
+    }
+    
+    .rrss ul{
+        text-align: center;
+        align-items: center;
+    }
+
     nav{
         position: fixed;
-        height:25vh;
+        height:40%;
         width: 100%;
         z-index: 999;
     }
@@ -303,33 +331,8 @@ ul li a:hover{
         width: 100%;
     }
 
-
-    .laBanda .galeriaIntegrantes .integrante{
-        width: 100%;
-        max-width: none;
-    }
-    
-    .laBanda .galeriaIntegrantes .integrante .artista{
-        color: white;
-        overflow: hidden;
-    }
-    
-
-    
-    .laBanda .galeriaIntegrantes .integrante img:hover{
-        opacity: 1;
-        transition-duration: .5s;
-        color: white;
-    
-    }
-    
-    .laBanda .galeriaIntegrantes .integrante:hover .artista{
-        color: white;
-        transition-duration: .3s;
-    }
-
     .gira, .contacto{
         margin: 0;
     }
     
-}
+}}
