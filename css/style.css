@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f2f2;
+    font-family: 'Robolo', sans-serif;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.span{
+    color: rgb(29, 29, 29);
+    font-weight: 500;
+}
+
+
+nav{
+	animation-delay: .5s;
+    position: fixed;
+    height: 100vh;
+    width: 30%;
+    background-color: #f2f2f2;
+    box-shadow: 6px 0px 29px -2px rgb(209, 209, 209);
+
+}
+
+
+
+ul{
+    margin-top: 50%;
+    text-align: center;
+}
+
+ul li{
+    width: 100%;
+    height: 50px;
+    border-bottom: px solid white;
+    overflow: hidden;
+}
+
+ul li a{
+    animation: text_reveal 1s ease forwards;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul li a:hover{
+    transition-duration: .5s;
+    color: black;
+}
+
+.navegador ul li a::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: rgba(0,0,0,.1);
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: letter-spacing .5s;
+}
+
+.navegador ul li a:hover::before{
+    content: attr(data-text);
+    opacity: 1;
+    letter-spacing: 10px;
+    overflow: hidden;
+}
+
+
+
+.rrss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rrss i{
+    color:#333;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 20px;
+}
+
+.rrss i:hover{
+    color: black;
+    transition-duration: .5s;
+}
+
+/*Main */
+.main{
+    margin-left: 33%;
+    padding: 20px 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.inicio{
+    width: 100%;
+}
+
+.inicio .tituloInicio{
+    padding: 30px 0;
+}
+.inicio .tituloInicio .tituloBanda{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 100;
+}
+.inicio .imagenInicio{
+    width: 100%;
+}
+
+.inicio .imagenInicio .imagen{
+    display: block;
+    margin: auto;
+}
+
+.inicio .imagenInicio .imagen img{
+    padding: 50px 0;
+    width: 80%
+}
+
+/*Galeria*/
+.laBanda{
+    width: 100%;
+}
+.tituloBanda{
+    margin: 50px 0;
+}
+.laBanda .tituloBanda .subtituloBanda{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.laBanda .galeriaIntegrantes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.laBanda .galeriaIntegrantes .integrante{
+    width: 30%;
+    max-width: 350px;
+    margin: 5px 20px;
+    object-fit: cover;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.laBanda .galeriaIntegrantes .integrante .artista{
+    position: absolute;
+    top: 10px;
+    transform: translateX(40%);
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.laBanda .galeriaIntegrantes .integrante img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.laBanda .galeriaIntegrantes .integrante img:hover{
+    background-color: rgba(128, 128, 128, 0.205);
+    opacity: .8;
+    transition-duration: .5s;
+    color: white;
+
+}
+
+.laBanda .galeriaIntegrantes .integrante:hover .artista{
+    color: white;
+    transition-duration: .3s;
+}
+/*Galeria*/
+
+/*Fechas de conciertos*/
+.gira{
+    margin-left: 33%;
+    padding: 20px 30px;
+}
+
+.gira .contenedor{
+    display: block;
+    text-align: center;
+}
+
+.tituloGira .subtituloGira{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.gira .contenedor .informacion{
+    font-family: 'Roboto', sans-serif;
+    margin: 100px 0;
+}
+
+.gira .contenedor .informacion p{
+    margin:10px 0;
+    color: #333;
+}
+/*Fechas de conciertos*/
+
+/*Contacto*/
+.contacto{
+    margin-left: 33%;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.tituloContacto{
+    margin: 50px 0;
+}
+
+.subtituloContacto{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.contacto .informacionContacto .mail,
+.contacto .informacionContacto .celular{
+    margin: 20px;
+}
+/*Contacto*/
+
+/*Keyframes*/
+@keyframes text_reveal {
+	100% {
+		color: #333;
+	}
+}
+
+@media screen and (max-width: 450px){
+    nav{
+        position: fixed;
+        height:25vh;
+        width: 100%;
+        z-index: 999;
+    }
+
+        
+    ul{
+        margin-top:10%;
+        text-align: center;
+    }
+
+    ul li{
+        width: 100%;
+        height: 100%;
+        border-bottom: px solid white;
+        overflow: hidden;
+    }
+
+    ul li a{
+        animation: text_reveal 1s ease forwards;
+        text-decoration: none;
+        color: #333;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .inicio .tituloBanda{
+        margin-top: 200px;
+    }
+    .inicio .imagenInicio .imagen img{
+        padding: 0;
+        width: 100%
+    }
+    
+    .main{
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+
+    .laBanda .galeriaIntegrantes .integrante{
+        width: 100%;
+        max-width: none;
+    }
+    
+    .laBanda .galeriaIntegrantes .integrante .artista{
+        color: white;
+        overflow: hidden;
+    }
+    
+
+    
+    .laBanda .galeriaIntegrantes .integrante img:hover{
+        opacity: 1;
+        transition-duration: .5s;
+        color: white;
+    
+    }
+    
+    .laBanda .galeriaIntegrantes .integrante:hover .artista{
+        color: white;
+        transition-duration: .3s;
+    }
+
+    .gira, .contacto{
+        margin: 0;
+    }
+    
+}
