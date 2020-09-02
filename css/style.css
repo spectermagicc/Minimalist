@@ -280,7 +280,7 @@ ul li a:hover{
     .rrss{
         display: flex;
         align-items: center;
-
+        margin-top: -30px;
     }
     
     .rrss ul{
@@ -290,7 +290,7 @@ ul li a:hover{
 
     nav{
         position: fixed;
-        height:40%;
+        height:auto;
         width: 100%;
         z-index: 999;
     }
